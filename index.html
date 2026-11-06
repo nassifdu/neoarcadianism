@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Neoarcadianism</title>
+<meta name="description" content="Neoarcadianism: a school of thought built upon Arcadianism and Epicureanism. Six principles for a life spent pondering.">
+<meta name="color-scheme" content="light dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=IM+Fell+Great+Primer&display=swap" rel="stylesheet">
+<link rel="preload" as="image" type="image/webp" imagesrcset="images/dream-of-arcadia-800.webp 800w, images/dream-of-arcadia-1400.webp 1400w, images/dream-of-arcadia-2400.webp 2400w, images/dream-of-arcadia-3600.webp 3600w" imagesizes="100vw">
+<link rel="stylesheet" href="style.css?v=9">
+<script>
+/* before first paint: the reader's saved theme, and (for Portuguese) hide the page until it is translated */
+(function () {
+  var d = document.documentElement; d.classList.add("js");
+  try {
+    var t = localStorage.getItem("neo-theme");
+    if (t === "light" || t === "dark") d.setAttribute("data-theme", t);
+    var l = localStorage.getItem("neo-lang") || ((navigator.language || "").toLowerCase().indexOf("pt") === 0 ? "pt" : "en");
+    if (l === "pt") { d.lang = "pt-BR"; d.classList.add("i18n-wait"); setTimeout(function () { d.classList.remove("i18n-wait"); }, 2500); }
+  } catch (e) {}
+})();
+</script>
+<style>.i18n-wait body { visibility: hidden; }</style>
+</head>
+<body>
+
+<!-- SVG filter used by the Fourth Principle -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <filter id="warp" x="-5%" y="-5%" width="110%" height="110%">
+    <feTurbulence id="warpNoise" type="fractalNoise" baseFrequency="0.008 0.012" numOctaves="2" seed="3"/>
+    <feDisplacementMap id="warpMap" in="SourceGraphic" scale="0" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+</svg>
+
+<!-- ============ OPENING ============ -->
+<header class="opening" id="top">
+  <div class="opening__art">
+    <picture>
+      <source type="image/webp" srcset="images/dream-of-arcadia-800.webp 800w, images/dream-of-arcadia-1400.webp 1400w, images/dream-of-arcadia-2400.webp 2400w, images/dream-of-arcadia-3600.webp 3600w" sizes="100vw">
+      <img src="images/dream-of-arcadia-1400.jpg" data-i18n-attr="alt:a.hero" alt="Thomas Cole, The Dream of Arcadia: figures dance in a sunlit grove; a temple stands on a hill beneath pale mountains." fetchpriority="high">
+    </picture>
+  </div>
+  <div class="opening__words">
+    <h1 class="inscr opening__title" data-i18n="hero.title">Neo<wbr>arcadianism</h1>
+    <p class="opening__sub" data-i18n="hero.sub">To ponder, to love, to socialise,<br>to create, to contemplate.</p>
+  </div>
+  <p class="credit">Thomas Cole, <i>The Dream of Arcadia</i></p>
+</header>
+
+<main>
+
+<!-- ============ INTRODUCTION ============ -->
+<section class="prose-sec" id="proemium">
+  <div class="margin-col">
+    <span class="kicker">Proœmium</span>
+  </div>
+  <div class="text-col">
+    <p class="lede rise" data-i18n="pro.lede">Neoarcadianism is a school of thought built upon <span role="button" tabindex="0" class="g">Arcadianism</span><span class="gl">the poetic movement of the eighteenth century, born in Rome’s Accademia dell’Arcadia and carried to Portugal and Brazil, whose poets dressed as shepherds and sang of the simple, measured life</span>, embracing its five principles, and <span role="button" tabindex="0" class="g">Epicureanism</span><span class="gl">the teaching of Epicurus, who held that the good life is a quiet one, spent among friends, in a garden</span>, embracing <span role="button" tabindex="0" class="g gr">ἀταραξία</span><span class="gl"><i>ataraxía</i>: freedom from disturbance</span> and <span role="button" tabindex="0" class="g gr">ἀπονία</span><span class="gl"><i>aponía</i>: freedom from pain</span>.</p>
+    <p class="hint rise" data-i18n="pro.hint">Words with a dotted line open where they stand. Touch one.</p>
+  </div>
+</section>
+
+<section class="prose-sec index-sec" id="principia">
+  <div class="margin-col">
+    <span class="kicker" data-i18n="idx.kicker">The Six Principles</span>
+  </div>
+  <div class="text-col">
+    <p class="rise" data-i18n="idx.intro">Behold the five principles of Arcadianism, as interpreted by Neoarcadianism, and the Sixth Principle:</p>
+    <ol class="tablet rise" aria-label="The six principles" data-i18n-attr="aria-label:idx.list">
+      <li><a href="#I"><span class="num">I</span><span class="inscr">Fvgere Vrbem</span></a></li>
+      <li><a href="#II"><span class="num">II</span><span class="inscr">Locvs Amœnvs</span></a></li>
+      <li><a href="#III"><span class="num">III</span><span class="inscr">Invtilia Trvncat</span></a></li>
+      <li><a href="#IV"><span class="num">IV</span><span class="inscr">Avrea Mediocritas</span></a></li>
+      <li><a href="#V"><span class="num">V</span><span class="inscr">Carpe Diem</span></a></li>
+      <li class="sixth"><a href="#VI"><span class="num">VI</span><span class="inscr">Compendivm Laboris</span></a></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ I · FVGERE VRBEM ============ -->
+<section class="fuge" id="I" aria-label="First Principle" data-i18n-attr="aria-label:s.I">
+  <div class="fuge__stage">
+    <picture class="fuge__art">
+      <source type="image/webp" srcset="images/course-of-empire-800.webp 800w, images/course-of-empire-1400.webp 1400w, images/course-of-empire-2400.webp 2400w, images/course-of-empire-3600.webp 3600w" sizes="100vw">
+      <img src="images/course-of-empire-1400.jpg" data-i18n-attr="alt:a.fuge" alt="Thomas Cole, The Arcadian or Pastoral State: shepherds, a lake and a smoking temple beneath a craggy mountain." loading="lazy">
+    </picture>
+    <div class="fuge__noise" aria-hidden="true"></div>
+    <div class="fuge__words">
+      <p class="pnum" data-i18n="I.pnum">First Principle</p>
+      <h2 class="inscr motto">Fvgere Vrbem</h2>
+      <p class="trans" data-i18n="I.trans">flee the city</p>
+      <p class="fuge__a" data-i18n="I.a">The noise and chaos of the urban environments hinder our ability to <span role="button" tabindex="0" class="g">ponder</span><span class="gl">to think, reflect, contemplate; to exist. To deepen one’s connection with existence, be it material or metaphysical</span>.</p>
+      <p class="fuge__b coda" data-i18n="I.b">Let there be no such environment, so this principle fades.</p>
+    </div>
+    <p class="credit">Thomas Cole, <i>The Course of Empire: The Arcadian or Pastoral State</i></p>
+  </div>
+</section>
+
+<!-- ============ II · LOCVS AMŒNVS ============ -->
+<section class="principle locus" id="II" aria-label="Second Principle" data-i18n-attr="aria-label:s.II">
+  <div class="principle__head rise">
+    <p class="pnum" data-i18n="II.pnum">Second Principle</p>
+    <h2 class="inscr motto">Locvs Amœnvs</h2>
+    <p class="trans" data-i18n="II.trans">the pleasant place</p>
+  </div>
+  <div class="locus__grid">
+    <div class="locus__text">
+      <p class="rise" data-i18n="II.p">To ponder ideally, one must be tranquil, experiencing <span role="button" tabindex="0" class="g gr">ἀταραξία</span><span class="gl">freedom from disturbance: nothing outside unsettles you</span> and <span role="button" tabindex="0" class="g gr">ἀπονία</span><span class="gl">freedom from pain: nothing inside troubles you</span>.</p>
+      <p class="coda rise" data-i18n="II.coda">Let there be idyllic, pleasant
+        <span role="button" tabindex="0" class="place" data-place="villages">villages</span>,
+        <span role="button" tabindex="0" class="place" data-place="lounges">lounges</span>,
+        <span role="button" tabindex="0" class="place" data-place="parks">parks</span>,
+        <span role="button" tabindex="0" class="place is-on" data-place="landscapes" aria-pressed="true">landscapes</span>
+        and <span role="button" tabindex="0" class="place" data-place="wilderness">wilderness</span>.</p>
+      <p class="hint rise" data-i18n="II.hint">Choose a place. The window will take you there.</p>
+    </div>
+    <figure class="arch rise">
+      <div class="arch__window">
+        <img data-place="villages" src="images/detail-musicians-1400.webp" srcset="images/detail-musicians-800.webp 800w, images/detail-musicians-1400.webp 1400w" sizes="(min-width: 900px) 40vw, 90vw" data-i18n-attr="alt:a.villages" alt="A piper and two listeners on a green, a river and a village beyond." loading="lazy">
+        <img data-place="lounges" src="images/detail-temple-1400.webp" srcset="images/detail-temple-800.webp 800w, images/detail-temple-1400.webp 1400w" sizes="(min-width: 900px) 40vw, 90vw" data-i18n-attr="alt:a.lounges" alt="A ruined round temple by the water; two figures rest beneath it." loading="lazy">
+        <img data-place="parks" src="images/detail-dancers-1400.webp" srcset="images/detail-dancers-800.webp 800w, images/detail-dancers-1400.webp 1400w" sizes="(min-width: 900px) 40vw, 90vw" data-i18n-attr="alt:a.parks" alt="Dancers in a sunlit grove beside a statue." loading="lazy">
+        <img data-place="landscapes" class="is-on" src="images/matlock-1400.webp" srcset="images/matlock-800.webp 800w, images/matlock-1400.webp 1400w, images/matlock-2400.webp 2400w, images/matlock-3600.webp 3600w" sizes="(min-width: 900px) 40vw, 90vw" data-i18n-attr="alt:a.landscapes" alt="A wide valley with a river and tall trees; mist rises from the hills." loading="lazy">
+        <img data-place="wilderness" src="images/dream-of-arcadia-1400.webp" srcset="images/dream-of-arcadia-800.webp 800w, images/dream-of-arcadia-1400.webp 1400w, images/dream-of-arcadia-2400.webp 2400w, images/dream-of-arcadia-3600.webp 3600w" sizes="(min-width: 900px) 60vw, 120vw" data-i18n-attr="alt:a.wilderness" alt="Jagged pink mountains, a waterfall and a temple on a crag." loading="lazy">
+        <div class="arch__mist" aria-hidden="true"></div>
+      </div>
+      <figcaption class="arch__cap" aria-live="polite">John Glover, <i>At Matlock — mist rising</i></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ III · INVTILIA TRVNCAT ============ -->
+<section class="principle prune" id="III" aria-label="Third Principle" data-i18n-attr="aria-label:s.III">
+  <div class="principle__head rise">
+    <p class="pnum" data-i18n="III.pnum">Third Principle</p>
+    <h2 class="inscr motto">Invtilia Trvncat</h2>
+    <p class="trans" data-i18n="III.trans">one prunes what is useless</p>
+  </div>
+  <div class="prune__grid">
+    <div class="prune__text">
+      <p class="rise" data-i18n="III.p">What matters is to ponder, to love, to socialise, to create, to contemplate; meaningless, mundane, banal tasks matter not. Furthermore, belittling activities — namely, consumerism, doomscrolling, drug abuse, ill-advised social behaviour — should be halted.</p>
+      <p class="hint rise" data-i18n="III.hint">A vine grows wild. Take the shears to what does not bear fruit.</p>
+      <div class="vine rise" role="group" aria-label="Prune the useless" data-i18n-attr="aria-label:vine.aria">
+        <button type="button" class="twig keep" data-i18n="twig.ponder">to ponder</button>
+        <button type="button" class="twig cut" data-i18n="twig.doom">doomscrolling</button>
+        <button type="button" class="twig keep" data-i18n="twig.love">to love</button>
+        <button type="button" class="twig cut" data-i18n="twig.banal">doing the dishes</button>
+        <button type="button" class="twig cut" data-i18n="twig.consume">consumerism</button>
+        <button type="button" class="twig keep" data-i18n="twig.social">to socialise</button>
+        <button type="button" class="twig cut" data-i18n="twig.drugs">drug abuse</button>
+        <button type="button" class="twig keep" data-i18n="twig.create">to create</button>
+        <button type="button" class="twig cut" data-i18n="twig.illadvised">ill-advised social behaviour</button>
+        <button type="button" class="twig keep" data-i18n="twig.contemplate">to contemplate</button>
+      </div>
+      <p class="vine__count" aria-live="polite"></p>
+      <p class="coda vine__coda" data-i18n="III.coda">Let meaningful, thoughtful lives be lived.</p>
+    </div>
+    <figure class="plate rise">
+      <picture>
+        <source type="image/webp" srcset="images/detail-philosopher-800.webp 800w, images/detail-philosopher-1400.webp 1400w" sizes="(min-width: 900px) 34vw, 90vw">
+        <img src="images/detail-philosopher-1400.jpg" data-i18n-attr="alt:a.phil" alt="An old man sits on a root, tracing geometric figures in the earth with a stick." loading="lazy">
+      </picture>
+      <figcaption data-i18n="III.cap">An old man draws figures in the dust and is in no hurry. <span class="credit-in">Detail, Thomas Cole, <i>The Arcadian or Pastoral State</i></span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ IV · AVREA MEDIOCRITAS ============ -->
+<section class="principle mean" id="IV" aria-label="Fourth Principle" data-i18n-attr="aria-label:s.IV">
+  <div class="principle__head rise">
+    <p class="pnum" data-i18n="IV.pnum">Fourth Principle</p>
+    <h2 class="inscr motto">Avrea Mediocritas</h2>
+    <p class="trans" data-i18n="IV.trans">the golden mean</p>
+  </div>
+  <div class="mean__body">
+    <p class="mean__text rise" data-i18n="IV.p">Too much dopamine, and one hallucinates; too little, and <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC18425/" target="_blank" rel="noopener">one dies of aphagia</a>. <span role="button" tabindex="0" class="g">Yin-yang</span><span class="gl">the Chinese pairing of shade and sun, each holding a seed of the other</span>, <span role="button" tabindex="0" class="g gr">παλίντονος ἁρμονίη</span><span class="gl"><i>palíntonos harmoníē</i>, Heraclitus’ “back-stretched harmony”: the tension that holds a bow or a lyre together, pulling both ways at once</span>, <span role="button" tabindex="0" class="g">yanantin</span><span class="gl">the Andean idea that opposites are partners, completing one another like two hands</span>.</p>
+
+    <figure class="mean__frame rise">
+      <div class="mean__warp">
+        <picture>
+          <source type="image/webp" srcset="images/pastoral-800.webp 800w, images/pastoral-1400.webp 1400w, images/pastoral-2400.webp 2400w, images/pastoral-3600.webp 3600w" sizes="(min-width: 1100px) 1000px, 94vw">
+          <img class="mean__img" src="images/pastoral-1400.jpg" data-i18n-attr="alt:a.pastoral" alt="Claude Lorrain, Pastoral Landscape: a ruined temple, great trees and a still lake at dusk; two figures and their flock rest on the bank." loading="lazy">
+        </picture>
+      </div>
+      <figcaption class="credit-in">Claude Lorrain, <i>Pastoral Landscape</i></figcaption>
+    </figure>
+
+    <div class="string rise">
+      <label for="dopa" class="string__label" data-i18n="IV.label">Dopamine</label>
+      <div class="string__track">
+        <span class="string__end" data-i18n="IV.little">too little</span>
+        <input type="range" id="dopa" min="0" max="100" value="50" step="1" aria-valuetext="golden">
+        <span class="string__end" data-i18n="IV.much">too much</span>
+      </div>
+      <p class="string__read" aria-live="polite"><span class="string__word">aurea</span> <span class="string__gloss">golden. Leave it here, or pull the string to either side.</span></p>
+    </div>
+    <p class="coda rise mean__coda" data-i18n="IV.coda">Let there be equilibrium, for it is <span class="gold">gold</span>.</p>
+  </div>
+</section>
+
+<!-- ============ V · CARPE DIEM ============ -->
+<section class="principle carpe" id="V" aria-label="Fifth Principle" data-i18n-attr="aria-label:s.V">
+  <div class="principle__head rise">
+    <p class="pnum" data-i18n="V.pnum">Fifth Principle</p>
+    <h2 class="inscr motto">Carpe Diem</h2>
+    <p class="trans" data-i18n="V.trans"><span role="button" tabindex="0" class="g">pluck the day</span><span class="gl">from Horace, Odes I.11. <i>Carpere</i> is to pick, as one picks a ripe fruit or a flower: the day is to be harvested, not hoarded</span></p>
+  </div>
+  <div class="carpe__grid">
+    <div class="carpe__text">
+      <p class="rise" data-i18n="V.p">At birth, one is allotted roughly <strong class="hours">460,000 hours</strong> of waking life. ’Tis not enough. Just as a farmer <span role="button" tabindex="0" class="g">gathers his rosebuds</span><span class="gl">“Gather ye rosebuds while ye may,” wrote Robert Herrick in 1648, “old Time is still a-flying”</span>, so too must one seize one’s every day. <span role="button" tabindex="0" class="g">How we spend our days is, of course, how we spend our lives</span><span class="gl">Annie Dillard, <i>The Writing Life</i>, 1989</span>.</p>
+      <div class="age rise">
+        <label for="age"><span data-i18n="V.agePre">I have lived </span><output id="ageOut" for="age">—</output><span data-i18n="V.agePost"> years.</span></label>
+        <input type="range" id="age" min="0" max="79" value="0" step="1">
+      </div>
+      <p class="age__read rise" aria-live="polite" data-i18n="V.read">Each grain of gold in the field is one waking hour. Tell the field your age.</p>
+      <p class="since rise"><span data-i18n="V.sincePre">You arrived </span><span class="since__n">a moment</span><span data-i18n="V.sincePost"> ago.</span></p>
+      <p class="coda rise" data-i18n="V.coda">Let there be mindfulness.</p>
+      <button type="button" class="breath-btn rise" data-i18n="V.breath">Pause for one breath</button>
+    </div>
+    <div class="field rise">
+      <canvas class="field__canvas" width="800" height="575" role="img" data-i18n-attr="aria-label:field.aria" aria-label="A field of 460,000 points, one for each waking hour of a life."></canvas>
+      <span class="field__now" aria-hidden="true"></span>
+      <span class="field__tip" aria-hidden="true"></span>
+      <p class="field__legend"><span data-i18n="V.legendA">birth</span><span data-i18n="V.legendB">460,000 waking hours</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VI · COMPENDIVM LABORIS ============ -->
+<section class="principle labor" id="VI" aria-label="Sixth Principle" data-i18n-attr="aria-label:s.VI">
+  <div class="principle__head rise">
+    <p class="pnum" data-i18n="VI.pnum">Sixth Principle</p>
+    <h2 class="inscr motto">Compendivm Laboris</h2>
+    <p class="trans" data-i18n="VI.trans">the saving of labour</p>
+  </div>
+  <div class="labor__grid">
+    <div class="labor__text">
+      <p class="rise" data-i18n="VI.p">In Ancient Greece, <span role="button" tabindex="0" class="g">shallow labour</span><span class="gl">meaningless, barren, futile activity such as laundering or doing the dishes. This is subjective, of course; depth can be found in seemingly shallow tasks</span> was delegated to the slaves; now, it is everyone’s onus. In Neoarcadianism, insentient <span role="button" tabindex="0" class="g">robots</span><span class="gl">the word is Czech, from <i>robota</i>, drudgery, coined for a play in 1920. The dream is older: Homer gave the smith-god Hephaestus handmaidens wrought of gold, who moved and worked on their own</span> shall see it done.</p>
+      <p class="coda rise" data-i18n="VI.coda">Let there be smart machines, gadgets and contraptions for every shallow task so as to optimise the enjoyment of human time.</p>
+    </div>
+    <div class="ledger rise">
+      <p class="ledger__title" data-i18n="VI.ledger">A day of sixteen waking hours</p>
+      <div class="day" aria-hidden="true"><div class="day__shallow"></div><div class="day__free"></div></div>
+      <p class="day__read" aria-live="polite"></p>
+      <ul class="tasks">
+        <li><span class="task__name" data-i18n="task.laundry">Laundering</span><span class="task__h" data-h="0.3">18 min</span><button type="button" class="task__btn">hand it over</button></li>
+        <li><span class="task__name" data-i18n="task.dishes">The dishes</span><span class="task__h" data-h="0.35">21 min</span><button type="button" class="task__btn">hand it over</button></li>
+        <li><span class="task__name" data-i18n="task.sweep">Sweeping &amp; scrubbing</span><span class="task__h" data-h="0.5">30 min</span><button type="button" class="task__btn">hand it over</button></li>
+        <li><span class="task__name" data-i18n="task.errands">Errands &amp; provisions</span><span class="task__h" data-h="0.4">24 min</span><button type="button" class="task__btn">hand it over</button></li>
+        <li><span class="task__name" data-i18n="task.forms">Forms &amp; bills</span><span class="task__h" data-h="0.25">15 min</span><button type="button" class="task__btn">hand it over</button></li>
+        <li class="kept-by-choice"><span class="task__name" data-i18n="task.cooking">Cooking</span><span class="task__h" data-h="0.75">45 min</span><button type="button" class="task__btn">hand it over</button><span class="task__note" data-i18n="VI.note">Some find depth here. Your call.</span></li>
+      </ul>
+    </div>
+  </div>
+  <figure class="labor__fig rise">
+    <picture>
+      <source type="image/webp" srcset="images/detail-musicians-800.webp 800w, images/detail-musicians-1400.webp 1400w" sizes="(min-width: 900px) 70vw, 100vw">
+      <img src="images/detail-musicians-1400.jpg" data-i18n-attr="alt:a.musicians" alt="A young man plays a pipe on the grass; two women stand listening." loading="lazy">
+    </picture>
+    <figcaption data-i18n="VI.cap">What the hours are for. <span class="credit-in">Detail, John Glover, <i>At Matlock — mist rising</i></span></figcaption>
+  </figure>
+</section>
+
+<!-- ============ ON A NEOARCADIAN SOCIETY ============ -->
+<section class="society" id="stoa" aria-label="On a Neoarcadian society" data-i18n-attr="aria-label:s.soc">
+  <div class="society__intro">
+    <span class="kicker rise">Epilogus</span>
+    <h2 class="society__title rise" data-i18n="soc.title">On a Neoarcadian society</h2>
+    <p class="rise" data-i18n="soc.p">Many seem to find in Neoarcadianism a political, social or economic worldview. Of course, like any school of thought, there are ideal conditions for it to flourish; though the Neoarcadian teachings should not be valued for their practicality, but rather for their ideality.</p>
+  </div>
+  <div class="society__scene">
+    <div class="society__stage">
+      <picture>
+        <source type="image/webp" srcset="images/stoa-800.webp 800w, images/stoa-1536.webp 1536w" sizes="100vw">
+        <img class="society__img" src="images/stoa-1536.jpg" width="1536" height="1024" data-i18n-attr="alt:a.stoa" alt="A sunlit stoa above a lake: friends share a breakfast at a rustic table, a father plays the lyre to his son, a woman sketches at an easel, an old man reads on a bench, and two robots hang laundry and carry dishes in the garden beyond." loading="lazy">
+      </picture>
+      <div class="society__dim" aria-hidden="true"></div>
+      <p class="verse" data-i18n="v.1">I picture a <span role="button" tabindex="0" class="g">stoa</span><span class="gl">a classic Greek building with a long, covered portico supported by parallel rows of columns, where Athenians walked, talked and taught</span>.</p>
+      <p class="verse" data-i18n="v.2">At a rustic table there are friends enjoying a fresh, hearty breakfast, sharing deep thoughts.</p>
+      <p class="verse" data-i18n="v.3">Beside it, a young father plays the <button type="button" class="lyre-word" title="Listen">lyre</button> to his observing son.</p>
+      <p class="verse" data-i18n="v.4">His wife, serene as the music, sketches the beautiful scene on an easel.</p>
+      <p class="verse" data-i18n="v.5">On a stone bench, an elderly man reads his pen pal’s letter.</p>
+      <p class="verse" data-i18n="v.6">And far off in the garden, gentle machines hang the washing and carry the dishes, so that no one at the table need rise.</p>
+    </div>
+    <div class="vignette" aria-hidden="true">
+      <div class="step"></div><div class="step"></div><div class="step"></div><div class="step"></div><div class="step"></div><div class="step"></div><div class="step step--outro"></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="colophon">
+  <p class="inscr colophon__vale">Vale</p>
+  <p data-i18n="foot.p">The paintings, all in the public domain: Thomas Cole, <i>The Dream of Arcadia</i> and <i>The Course of Empire: The Arcadian or Pastoral State</i>; John Glover, <i>At Matlock — mist rising</i>; Claude Lorrain, <i>Pastoral Landscape</i>.</p>
+  <p><a href="#top" data-i18n="foot.top">Return to the beginning</a></p>
+</footer>
+
+<!-- Options: an olive sprig that opens into a pill with the lyre, the theme and the language -->
+<div class="dock" id="dock">
+  <div class="dock__tray" id="dockTray">
+    <button type="button" class="dock__btn lyre" aria-pressed="false" title="Play the lyre" aria-label="Play the lyre">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M9 4c-3 3-3 9 0 13 1.6 2 2.4 4 2.4 6.5V27h9.2v-3.5c0-2.5.8-4.5 2.4-6.5 3-4 3-10 0-13" /><path d="M9 6h14M13 6v21M16 6v21M19 6v21"/><path d="M10 27h12"/></svg>
+    </button>
+    <button type="button" class="dock__btn theme" title="Dark theme" aria-label="Dark theme">
+      <svg class="theme__moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.5 14.6A7.6 7.6 0 0 1 9.4 4.5a7.6 7.6 0 1 0 10.1 10.1z"/></svg>
+      <svg class="theme__sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.1"/><path d="M12 2.6v2.3M12 19.1v2.3M2.6 12h2.3M19.1 12h2.3M5.4 5.4l1.6 1.6M17 17l1.6 1.6M5.4 18.6 7 17M17 7l1.6-1.6"/></svg>
+    </button>
+    <div class="lang" role="group" aria-label="Language · Idioma">
+      <button type="button" class="lang__btn" data-lang="en" lang="en" title="English" aria-label="English" aria-pressed="true">
+        <svg viewBox="0 0 30 30" aria-hidden="true"><clipPath id="flagUK"><circle cx="15" cy="15" r="15"/></clipPath><g clip-path="url(#flagUK)"><rect width="30" height="30" fill="#012169"/><path d="M0 0 30 30M30 0 0 30" stroke="#fff" stroke-width="6"/><path d="M0 0 30 30M30 0 0 30" stroke="#C8102E" stroke-width="2"/><path d="M15 0v30M0 15h30" stroke="#fff" stroke-width="10"/><path d="M15 0v30M0 15h30" stroke="#C8102E" stroke-width="6"/></g></svg>
+      </button>
+      <button type="button" class="lang__btn" data-lang="pt" lang="pt-BR" title="Português" aria-label="Português" aria-pressed="false">
+        <svg viewBox="0 0 30 30" aria-hidden="true"><clipPath id="flagBR"><circle cx="15" cy="15" r="15"/></clipPath><g clip-path="url(#flagBR)"><rect width="30" height="30" fill="#009C3B"/><path d="M15 4.6 28.4 15 15 25.4 1.6 15z" fill="#FFDF00"/><circle cx="15" cy="15" r="6.3" fill="#002776"/><path d="M8.9 13.6c4-1.1 8.4-.5 12 1.8" stroke="#fff" stroke-width="1.2" fill="none"/></g></svg>
+      </button>
+    </div>
+  </div>
+  <button type="button" class="dock__toggle" aria-expanded="false" aria-controls="dockTray" title="Options" aria-label="Options">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M3.6 21.2C7.4 17.9 12.6 12.7 18.8 4.4"/>
+      <ellipse cx="7.3" cy="14.3" rx="1.25" ry="3" transform="rotate(5 7.3 14.3)"/>
+      <ellipse cx="12.6" cy="15.1" rx="1.25" ry="3" transform="rotate(84 12.6 15.1)"/>
+      <ellipse cx="11.6" cy="9.4" rx="1.2" ry="2.9" transform="rotate(8 11.6 9.4)"/>
+      <ellipse cx="16.9" cy="10.1" rx="1.2" ry="2.8" transform="rotate(80 16.9 10.1)"/>
+      <ellipse cx="19.8" cy="3.4" rx="1.1" ry="2.5" transform="rotate(45 19.8 3.4)"/>
+      <path d="M9.2 14.9Q10.6 16.2 10.9 17.2" stroke-width="1"/><ellipse class="olive" cx="11" cy="19.4" rx="1.25" ry="1.75" transform="rotate(-6 11 19.4)"/>
+    </svg>
+  </button>
+</div>
+
+<div class="breath" hidden>
+  <div class="breath__orb"></div>
+  <p class="breath__word">in</p>
+  <p class="breath__leave" data-i18n="breath.leave">touch anywhere to return</p>
+</div>
+
+<script src="i18n.js?v=4"></script>
+<script src="script.js?v=24"></script>
+</body>
+</html>
