@@ -1,5 +1,11 @@
 /* ───────────── Neoarcadianism ───────────── */
 
+@font-face {
+  font-family: "Ylvin Script";
+  src: url("fonts/ylvin-script.woff2") format("woff2");
+  font-display: swap;
+}
+
 :root {
   --vellum: #ede3cc;
   --vellum-2: #e4d7b9;
@@ -724,7 +730,7 @@ input[type="range"]::-moz-range-thumb {
   transition: max-width .5s var(--slow), opacity .3s var(--slow), visibility 0s linear .5s;
 }
 .dock.is-open .dock__tray {
-  max-width: 220px; opacity: 1; visibility: visible;
+  max-width: 260px; opacity: 1; visibility: visible;
   transition: max-width .5s var(--slow), opacity .4s var(--slow) .08s, visibility 0s;
 }
 .dock__btn, .dock__toggle {
@@ -804,4 +810,49 @@ input[type="range"]::-moz-range-thumb {
 @media (max-width: 520px) {
   .motto { letter-spacing: .05em; }
   .fuge .credit { display: none; }
+}
+
+/* ───── Ylvinese script (one face, no faux italic, no CSS uppercasing of non-paired letters) ───── */
+:root[lang="x-ylvin"] body {
+  font-family: "Ylvin Script", var(--f-text);
+  font-weight: 500;
+  font-variant-ligatures: none;
+  letter-spacing: .02em;
+}
+:root[lang="x-ylvin"] .opening__title {
+  font-family: "Ylvin Script", var(--f-inscr);
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: .12em;
+}
+:root[lang="x-ylvin"] .lede::first-letter {
+  font-family: "Ylvin Script", var(--f-inscr);
+  font-weight: 500;
+}
+:root[lang="x-ylvin"] :is(.hours, .age output, .string__label, .string__word, .ledger__title) {
+  font-family: "Ylvin Script", var(--f-text);
+  font-weight: 500;
+  text-transform: none;
+}
+:root[lang="x-ylvin"] .noise-frag > span {
+  font-family: "Ylvin Script", system-ui, sans-serif;
+  text-transform: none;
+}
+:root[lang="x-ylvin"] :is(.pnum, .kicker[data-i18n], .trans, .coda, .hint, .place, .twig, .vine__count, .plate figcaption, .string__end, .string__gloss, .age label, .since, .field__legend, .field__tip, .breath-btn, .task__btn, .breath__word, .breath__leave, .day__read, .task__note, .labor__fig figcaption, .society__title, .verse:first-of-type, .g[aria-expanded="true"] + .gl) {
+  font-style: normal;
+}
+:root[lang="x-ylvin"] :is(.motto, .tablet .inscr, .colophon__vale) {
+  font-family: var(--f-inscr);
+  font-weight: 400;
+}
+:root[lang="x-ylvin"] :is(.margin-col .kicker:not([data-i18n]), .society__intro .kicker, .g.gr) {
+  font-family: var(--f-text);
+  font-weight: 400;
+  letter-spacing: normal;
+}
+:root[lang="x-ylvin"] :is(.credit, .credit-in i, .gl i, .colophon i, .arch__cap i) {
+  font-family: var(--f-text);
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: normal;
 }

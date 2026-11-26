@@ -34,7 +34,7 @@
       if (isTwig(el)) el.firstChild.nodeValue = v; else el.innerHTML = v;
     });
     $$("[data-i18n-attr]").forEach((el) => attrPairs(el).forEach(([a, k]) => { if (attr[k] !== undefined) el.setAttribute(a, attr[k]); }));
-    root.lang = lang === "pt" ? "pt-BR" : "en";
+    root.lang = lang === "pt" ? "pt-BR" : lang === "yl" ? "x-ylvin" : "en";
     document.title = T("title");
     const md = $('meta[name="description"]');
     if (md) md.setAttribute("content", T("description"));
@@ -525,7 +525,8 @@
       if (li.classList.contains("given")) freed += h; else shallow += h;
     });
     dayShallow.style.flexBasis = (shallow / 16 * 100 * 4) + "%"; // drawn ×4 so a small hour shows
-    const fmtH = (h) => { const m = Math.round(h * 60); return m >= 60 ? `${Math.floor(m / 60)} h ${m % 60} min` : `${m} min`; };
+    const fmtH = (h) => { const m = Math.round(h * 60); const hu = T("hUnit") || "h", mu = T("minUnit") || "min"; return m >= 60 ? `${Math.floor(m / 60)} ${hu} ${m % 60} ${mu}` : `${m} ${mu}`; };
+    tasks.forEach((li) => { const el = $(".task__h", li); el.textContent = fmtH(+el.dataset.h); });
     if (!freed) dayRead.textContent = T("dayShallow")(fmtH(shallow), fmt(shallow * 365.25 / 16));
     else {
       const year = freed * 365.25;
